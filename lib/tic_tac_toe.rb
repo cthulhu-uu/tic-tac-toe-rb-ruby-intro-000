@@ -16,6 +16,10 @@ def move(board, index, player_token)
   board[index] = player_token
 end
 
+def valid_move?(board, index)
+  index.between?(0,8) && !position_taken?(board, index)
+end
+
 def position_taken?(board, pos)
   !(board[pos].nil? || board[pos] == " ")
 end
