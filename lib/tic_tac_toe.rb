@@ -39,7 +39,7 @@ end
 
 def play(board)
   turn_num = 0
-  while turn_num < 10
+  while turn_num < 10 && !over?(board)
     turn(board)
     turn_num +=1
   end
