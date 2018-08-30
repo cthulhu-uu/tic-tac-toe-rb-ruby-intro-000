@@ -30,7 +30,7 @@ def turn_count(board)
   return count
 end
 
-def current_player(board)
+def player_token (board)
   if turn_count(board).even?
     return "X"
   end
