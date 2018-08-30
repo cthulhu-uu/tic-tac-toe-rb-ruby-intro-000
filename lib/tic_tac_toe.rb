@@ -24,6 +24,18 @@ def position_taken?(board, pos)
   !(board[pos].nil? || board[pos] == " ")
 end
 
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else
+    turn(board)
+  end
+end
+=begin
 def turn(board, input)
   #This is my method NOT using recursion
   puts "Please enter 1-9:"
@@ -35,6 +47,7 @@ def turn(board, input)
   end
   display_board(board)
 end
+=end
 
 def play(board)
   turn_num = 0
