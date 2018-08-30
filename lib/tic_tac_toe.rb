@@ -44,7 +44,7 @@ def play(board)
     turn_num +=1
   end
   if won?(board)
-    puts "Congratulations #{winner}!"
+    puts "Congratulations #{winner(board)}!"
   end
 end
 
