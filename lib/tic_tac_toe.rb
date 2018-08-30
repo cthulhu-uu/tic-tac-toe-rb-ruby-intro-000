@@ -17,7 +17,7 @@ def move(board, index, player_token)
 end
 
 def valid_move?(board, pos)
-  index.between?(0,8) && !position_taken?(board, pos)
+  pos.between?(0,8) && !position_taken?(board, pos)
 end
 
 def position_taken?(board, pos)
