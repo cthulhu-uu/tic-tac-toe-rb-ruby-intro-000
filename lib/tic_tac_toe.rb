@@ -12,7 +12,7 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-def move(board, index, player_token)
+def move(board, index, current_player)
   board[index] = player_token
 end
 
@@ -32,7 +32,7 @@ def turn(board)
   if valid_move?(board, input) == false
     input = gets.chomp
   else
-    move(board, input, player_token(board))
+    move(board, input, current_player(board))
   end
   display_board(board)
 end
@@ -55,7 +55,7 @@ def turn_count(board)
   return count
 end
 
-def player_token(board)
+def current_player(board)
   if turn_count(board).even?
     return "X"
   end
