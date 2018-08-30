@@ -32,7 +32,7 @@ def turn(board)
   if valid_move?(board, input) == false
     input = gets.chomp
   else
-    move(board, input)
+    move(board, input, player_token)
   end
   display_board(board)
 end
