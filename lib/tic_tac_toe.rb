@@ -17,7 +17,7 @@ def move(board, index, player_token)
 end
 
 def position_taken?(board, pos)
-  !(board[pos].nil? || board[index] == " ")
+  !(board[pos].nil? || board[pos] == " ")
 end
 
 def turn_count(board)
