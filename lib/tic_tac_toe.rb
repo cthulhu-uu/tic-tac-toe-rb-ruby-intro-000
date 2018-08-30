@@ -24,6 +24,26 @@ def position_taken?(board, pos)
   !(board[pos].nil? || board[pos] == " ")
 end
 
+def turn(board)
+  #This is my method NOT using recursion
+  puts "Please enter 1-9:"
+  input = input_to_index(gets.chomp)
+  if valid_move?(board, input) == false
+    input = gets.chomp
+  else
+    move(board, input)
+  end
+  display_board(board)
+end
+
+def play(board)
+  turn_num = 0
+  while turn_num < 10
+    turn(board)
+    turn_num +=1
+  end
+end
+
 def turn_count(board)
   count = 0
   board.each do |pos|
