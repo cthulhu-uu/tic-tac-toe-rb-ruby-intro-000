@@ -24,7 +24,7 @@ def position_taken?(board, pos)
   !(board[pos].nil? || board[pos] == " ")
 end
 
-def turn(board)
+def turn(board, input)
   #This is my method NOT using recursion
   puts "Please enter 1-9:"
   input = input_to_index(gets.chomp)
